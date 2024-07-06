@@ -1,11 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import ExampleComponent from './components/ExampleComponent';
+import Page from './page';
 
-describe('Component test', () => {
+describe('Loading the page', () => {
   it('renders the heading correctly', () => {
-    render(<ExampleComponent />)
+    render(<Page />);
+    expect(screen.getByText('Hello, world!')).toBeInTheDocument();
+  });
 
-    expect(screen.getByText("Component")).toBeInTheDocument();
+  it('matches the snapshot', () => {
+    const { asFragment } = render(<Page />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

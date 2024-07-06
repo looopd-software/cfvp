@@ -10,7 +10,7 @@ const config: Config = {
       xl: '1440px',
     },
     colors: {
-      primary: "var(--primary-color)",
+      primary: 'var(--primary-color)',
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],

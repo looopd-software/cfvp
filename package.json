@@ -19,8 +19,10 @@
     "@heroicons/react": "^2.0.18",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.2",
+    "framer-motion": "^11.2.13",
     "next": "14.0.4",
     "next-intl": "^3.4.0",
+    "nodemailer": "^6.9.14",
     "react": "^18",
     "react-calendly": "^4.3.0",
     "react-dom": "^18"
@@ -31,6 +33,7 @@
     "@testing-library/user-event": "^14.5.1",
     "@types/jest": "^29.5.11",
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.15",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",

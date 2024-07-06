@@ -6,7 +6,7 @@ export const marcellus = Marcellus({
   variable: '--font-primary',
 });
 
-export const dmSans = Karla({
+export const karla = Karla({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-secondary',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Video } from '../common/Video';
-import Navbar from './Navbar';
+import Navbar from '../navbar/Navbar';
 import Image from 'next/image';
 
 const HeroVideo = () => {
@@ -21,16 +21,17 @@ const HeroSection = () => {
     <div className="relative w-full h-screen flex justify-center">
       <HeroVideo />
       <Navbar />
-      <div className='flex flex-col relative w-full z-10 items-center justify-center h-full gap-10'>
+      <div className="flex flex-col relative w-full z-10 items-center justify-center h-full gap-10">
         <Image
           src={'/hero/logo.svg'}
-          alt='Logo de Castro Fernandez Vignau y Pianovi'
+          alt="Logo de Castro Fernandez Vignau y Pianovi"
           width={757}
           height={332}
         />
-        <h1 className='uppercase text-white text-[28px] leading-7 font-serif'>Profesionales en ciencias económicas</h1>
+        <h1 className="uppercase text-white text-[28px] leading-7 font-serif">
+          Profesionales en ciencias económicas
+        </h1>
       </div>
-
     </div>
   );
 };

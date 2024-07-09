@@ -1,12 +1,14 @@
 import React from 'react';
 import { Video } from '../common/Video';
+import Navbar from './Navbar';
 
 const HeroVideo = () => {
   return (
     <React.Fragment>
-      <div className="w-full h-full bg-[#1A1A1AA6] absolute top-0 left-0 z-20"></div>
+      <div className="w-full h-full bg-[#1A1A1AA6] absolute top-0 left-0 z-10"></div>
       <Video
-        className="object-cover w-full h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        className={`absolute object-cover w-full h-full overflow-visible z-0
+        lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2`}
         path="/hero/hero-video.mp4"
       />
     </React.Fragment>
@@ -15,8 +17,9 @@ const HeroVideo = () => {
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-red-500 flex justify-center items-center">
+    <div className="relative w-full h-screen">
       <HeroVideo />
+      <Navbar />
     </div>
   );
 };

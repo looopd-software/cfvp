@@ -7,7 +7,7 @@ import HeroSection from './components/sections/HeroSection';
 export default function Page() {
   return (
     <div
-      className={`${marcellus.variable} ${karla.variable} overflow-x-hidden`}
+      className={`${marcellus.variable} ${karla.variable} font-sans overflow-x-hidden`}
     >
       <HeroSection />
     </div>

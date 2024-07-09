@@ -1,5 +1,4 @@
 import AccordionItem from './AccordionItem';
-import ArrowDownIcon from './icons/ArrowDownIcon';
 import ContabilidadAuditoriaIcon from './icons/ContabilidadAuditoriaIcon';
 import ImpuestosIcon from './icons/ImpuestosIcon';
 import LaboralIcon from './icons/LaboralIcon';

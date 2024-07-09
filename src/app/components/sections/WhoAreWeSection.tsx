@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const WhoAreWeSection = () => {
   return (
-    <div className="relative w-full flex flex-col items-center justify-center bg-black py-24 gap-11 z-0 overflow-hidden">
+    <section className="relative w-full flex flex-col items-center justify-center bg-black py-24 gap-11 z-0 overflow-hidden">
       <Image
         src="/hero/isotipo-2.png"
         width={600}
@@ -18,7 +18,7 @@ const WhoAreWeSection = () => {
         comprometidos desde siempre con dos valores fundamentales: una sólida
         ética de trabajo, y el crecimiento de nuestros clientes.
       </p>
-    </div>
+    </section>
   );
 };
 

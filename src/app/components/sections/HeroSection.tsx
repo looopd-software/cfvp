@@ -18,7 +18,7 @@ const HeroVideo = () => {
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-screen flex justify-center">
+    <section className="relative w-full h-screen flex justify-center">
       <HeroVideo />
       <Navbar />
       <div className="flex flex-col relative w-full z-10 items-center justify-center h-full gap-10">
@@ -32,7 +32,7 @@ const HeroSection = () => {
           Profesionales en ciencias económicas
         </h1>
       </div>
-    </div>
+    </section>
   );
 };
 

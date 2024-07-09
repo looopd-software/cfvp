@@ -5,7 +5,7 @@ import ServicesAccordions from '../services/ServiceAccordions';
 const ServicesSection = () => {
   return (
     <section id="servicios" className="bg-white ">
-      <div className="flex flex-col justify-center items-center container py-32 gap-12">
+      <div className="flex flex-col justify-center items-center container py-32 gap-12 max-w-desktop">
         <Heading text="NUESTROS SERVICIOS" variant="dark" />
         <p className="text-center">
           Nos distinguimos en el mercado por ofrecer soluciones integrales,

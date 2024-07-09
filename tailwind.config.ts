@@ -30,12 +30,11 @@ const config: Config = {
         neutral: '#5B5A62',
       },
       fontFamily: {
-        sans: [
-          'var(--font-sans)',
-          'sans-serif',
-          ...defaultTheme.fontFamily.sans,
-        ],
+        sans: ['var(--font-sans)', 'sans-serif'],
         serif: ['var(--font-serif)', 'serif'],
+      },
+      maxWidth: {
+        desktop: '1180px',
       },
     },
   },

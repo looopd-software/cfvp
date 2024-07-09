@@ -21,7 +21,7 @@ const HeroSection = () => {
     <section className="relative w-full h-screen flex justify-center">
       <HeroVideo />
       <Navbar />
-      <div className="flex flex-col relative w-full z-10 items-center justify-center h-full gap-10">
+      <div className="flex flex-col relative w-full z-10 items-center justify-center h-full gap-10 max-w-desktop">
         <Image
           src={'/hero/logo.svg'}
           alt="Logo de Castro Fernandez Vignau y Pianovi"

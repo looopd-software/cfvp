@@ -10,7 +10,7 @@ import GestionDeLaEmpresaIcon from './icons/GestionDeLaEmpresa';
 import ValuacionEmpresasIcon from './icons/ValuacionEmpresasIcon';
 
 const ServicesAccordions = () => {
-  const primaryColor = "var(--primary-color)";
+  const primaryColor = 'var(--primary-color)';
 
   return (
     <div className="flex w-full justify-between">
@@ -38,7 +38,9 @@ const ServicesAccordions = () => {
         />
       </div>
       <div className="flex flex-col gap-4">
-        <p className="font-bold text-2xl mb-2">NEGOCIOS Y REINGENIERÍA DE EMPRESAS</p>
+        <p className="font-bold text-2xl mb-2">
+          NEGOCIOS Y REINGENIERÍA DE EMPRESAS
+        </p>
         <AccordionItem
           icon={<EstructuracionDeNegociosIcon color={primaryColor} />}
           text="Estructuración de negocios"

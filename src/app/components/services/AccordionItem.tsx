@@ -13,7 +13,7 @@ const AccordionItem = ({ icon, text, description }: AccordionItemProps) => {
         {icon}
         <p className="font-semibold text-xl max-w-[330px]">{text}</p>
       </div>
-      <ArrowDownIcon color='var(--primary-color)' />
+      <ArrowDownIcon color="var(--primary-color)" />
     </div>
   );
 };

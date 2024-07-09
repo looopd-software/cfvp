@@ -9,29 +9,29 @@ import GestionDeLaEmpresaIcon from './icons/GestionDeLaEmpresa';
 import ValuacionEmpresasIcon from './icons/ValuacionEmpresasIcon';
 
 const ServicesAccordions = () => {
-  const primaryColor = 'var(--primary-color)';
+
 
   return (
     <div className="flex w-full justify-between">
       <div className="flex flex-col gap-4">
         <p className="font-bold text-2xl mb-2">SERVICIOS CONVENCIONALES</p>
         <AccordionItem
-          icon={<ImpuestosIcon color={primaryColor} />}
+          icon={<ImpuestosIcon />}
           text="Impuestos"
           description="lorem ipsum"
         />
         <AccordionItem
-          icon={<ContabilidadAuditoriaIcon color={primaryColor} />}
+          icon={<ContabilidadAuditoriaIcon />}
           text="Contabilidad y auditoría"
           description="lorem ipsum"
         />
         <AccordionItem
-          icon={<LaboralIcon color={primaryColor} />}
+          icon={<LaboralIcon />}
           text="Laboral y RR.HH."
           description="lorem ipsum"
         />
         <AccordionItem
-          icon={<SociedadesIcon color={primaryColor} />}
+          icon={<SociedadesIcon />}
           text="Sociedades"
           description="lorem ipsum"
         />
@@ -41,22 +41,22 @@ const ServicesAccordions = () => {
           NEGOCIOS Y REINGENIERÍA DE EMPRESAS
         </p>
         <AccordionItem
-          icon={<EstructuracionDeNegociosIcon color={primaryColor} />}
+          icon={<EstructuracionDeNegociosIcon />}
           text="Estructuración de negocios"
           description="lorem ipsum"
         />
         <AccordionItem
-          icon={<ConsultoriaEconomicaIcon color={primaryColor} />}
+          icon={<ConsultoriaEconomicaIcon />}
           text="Consultoría económica y financiera"
           description="lorem ipsum"
         />
         <AccordionItem
-          icon={<GestionDeLaEmpresaIcon color={primaryColor} />}
+          icon={<GestionDeLaEmpresaIcon />}
           text="Gestión de la empresa y optimización de costos"
           description="lorem ipsum"
         />
         <AccordionItem
-          icon={<ValuacionEmpresasIcon color={primaryColor} />}
+          icon={<ValuacionEmpresasIcon />}
           text="Valuación de empresas y análisis de proyectos de inversión"
           description="lorem ipsum"
         />

@@ -5,6 +5,7 @@ import { marcellus, karla } from './fonts';
 import HeroSection from './components/sections/HeroSection';
 import WhoAreWeSection from './components/sections/WhoAreWeSection';
 import ServicesSection from './components/sections/ServicesSection';
+import OurTeamSection from './components/sections/OurTeamSection';
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
       <HeroSection />
       <WhoAreWeSection />
       <ServicesSection />
+      <OurTeamSection />
     </div>
   );
 }

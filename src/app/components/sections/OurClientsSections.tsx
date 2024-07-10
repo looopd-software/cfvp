@@ -34,7 +34,7 @@ const OurClientsSections = () => {
       />
       <div className="grid grid-cols-2  gap-y-20 container max-w-desktop py-32">
         <Heading text="NUESTROS CLIENTES" variant="dark" />
-        <p className='text-lg'>
+        <p className="text-lg">
           Dirigimos nuestros servicios principalmente a empresas medianas de la
           región, muchas veces organizadas bajo el formato de empresas
           familiares, ya sean industriales, comerciales o de servicios.

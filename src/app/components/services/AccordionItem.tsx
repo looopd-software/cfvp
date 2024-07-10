@@ -42,7 +42,7 @@ const AccordionItem = ({
   };
 
   return (
-    <div className="border-b-[#595959] border-b-[1px] flex flex-col pb-2 transition-all duration-200 max-w-[22dvw]">
+    <div className="border-b-[#595959] border-b-[1px] flex flex-col pb-2 transition-all duration-200 max-w-full">
       <div
         className="flex items-center justify-between gap-3 cursor-pointer"
         onClick={toggleAccordion}

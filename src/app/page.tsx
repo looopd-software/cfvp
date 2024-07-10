@@ -7,6 +7,7 @@ import WhoAreWeSection from './components/sections/WhoAreWeSection';
 import ServicesSection from './components/sections/ServicesSection';
 import OurTeamSection from './components/sections/OurTeamSection';
 import OurClientsSection from './components/sections/OurClientsSections';
+import OurSpaceSection from './components/sections/OurSpaceSection';
 
 export default function Page() {
   return (
@@ -18,6 +19,7 @@ export default function Page() {
       <ServicesSection />
       <OurTeamSection />
       <OurClientsSection />
+      <OurSpaceSection />
     </div>
   );
 }

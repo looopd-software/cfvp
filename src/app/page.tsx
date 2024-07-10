@@ -6,6 +6,7 @@ import HeroSection from './components/sections/HeroSection';
 import WhoAreWeSection from './components/sections/WhoAreWeSection';
 import ServicesSection from './components/sections/ServicesSection';
 import OurTeamSection from './components/sections/OurTeamSection';
+import OurClientsSection from './components/sections/OurClientsSections';
 
 export default function Page() {
   return (
@@ -16,6 +17,7 @@ export default function Page() {
       <WhoAreWeSection />
       <ServicesSection />
       <OurTeamSection />
+      <OurClientsSection />
     </div>
   );
 }

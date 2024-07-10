@@ -1,7 +1,6 @@
 const AgropecuarioIcon = ({ color }: IconProps) => {
   return (
     <div className="w-12 h-12 flex justify-end ">
-
       <svg
         width="50"
         height="50"

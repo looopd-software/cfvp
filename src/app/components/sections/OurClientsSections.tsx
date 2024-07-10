@@ -15,9 +15,9 @@ interface IndustryItemProps {
 }
 const IndustryItem = ({ icon, title }: IndustryItemProps) => {
   return (
-    <div className='flex flex-col items-center gap-2'>
+    <div className="flex flex-col items-center gap-2">
       {icon}
-      <p className='text-center max-w-20'>{title}</p>
+      <p className="text-center max-w-20">{title}</p>
     </div>
   );
 };
@@ -34,15 +34,17 @@ const OurClientsSections = () => {
       />
       <div className="grid grid-cols-2  gap-y-20 container max-w-desktop py-32">
         <Heading text="NUESTROS CLIENTES" variant="dark" />
-        <p>
+        <p className='text-lg'>
           Dirigimos nuestros servicios principalmente a empresas medianas de la
           región, muchas veces organizadas bajo el formato de empresas
           familiares, ya sean industriales, comerciales o de servicios.
+          <br />
           <br />
           Estamos preparados para ofrecer soluciones tanto a corto como a largo
           plazo, desde intervenciones puntuales y transitorias hasta soluciones
           de consultoría permanente destinadas a estrechar y fortalecer la
           relación con nuestros clientes.
+          <br />
           <br />
           Nuestra firma trasciende los límites habituales de un estudio
           contable, asumiendo funciones de asesoramiento y consultoría que

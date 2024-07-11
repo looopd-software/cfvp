@@ -8,6 +8,7 @@ import ServicesSection from './components/sections/ServicesSection';
 import OurTeamSection from './components/sections/OurTeamSection';
 import OurClientsSection from './components/sections/OurClientsSections';
 import OurSpaceSection from './components/sections/OurSpaceSection';
+import PartnersSection from './components/sections/PartnersSection';
 
 export default function Page() {
   return (
@@ -20,6 +21,8 @@ export default function Page() {
       <OurTeamSection />
       <OurClientsSection />
       <OurSpaceSection />
+      <OurSpaceSection />
+      <PartnersSection />
     </div>
   );
 }

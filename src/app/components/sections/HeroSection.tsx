@@ -18,7 +18,7 @@ const HeroVideo = () => {
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full h-screen flex justify-center">
+    <section id="hero" className="relative w-full h-screen flex justify-center">
       <HeroVideo />
       <Navbar />
       <div className="flex flex-col relative w-full z-10 items-center justify-center h-full gap-10 max-w-desktop">

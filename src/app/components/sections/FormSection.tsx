@@ -5,7 +5,7 @@ import ContactIcons from '../form/ContactIcons';
 
 const FormSection = () => {
   return (
-    <section id="formulario" className="relative bg-white">
+    <section id="contacto" className="relative bg-white">
       <div className="relative flex w-full h-full gap-20">
         <div className="relative h-auto w-2/5">
           <Image

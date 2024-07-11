@@ -10,6 +10,7 @@ import OurClientsSection from './components/sections/OurClientsSections';
 import OurSpaceSection from './components/sections/OurSpaceSection';
 import PartnersSection from './components/sections/PartnersSection';
 import FormSection from './components/sections/FormSection';
+import FooterSection from './components/sections/FooterSection';
 
 export default function Page() {
   return (
@@ -24,6 +25,7 @@ export default function Page() {
       <OurSpaceSection />
       <PartnersSection />
       <FormSection />
+      <FooterSection />
     </div>
   );
 }

@@ -11,27 +11,34 @@ import ValuacionEmpresasIcon from './icons/ValuacionEmpresasIcon';
 const ServicesAccordions = () => {
   return (
     <div className="flex w-full justify-between gap-10">
-      <div className="flex flex-col gap-6">
+      <div className="flex w-full flex-col gap-6">
         <p className="font-bold text-2xl mb-2">SERVICIOS CONVENCIONALES</p>
         <AccordionItem
           icon={<ImpuestosIcon />}
           text="Impuestos"
           description={[
-            'Asesoramiento tributario integral y planificación fiscal estratégica, declaraciones juradas e Inspecciones.',
+            'Asesoramiento tributario integral.',
+            'Planificación fiscal estratégica.',
+            'Declaraciones juradas.',
+            'Inscripciones y bajas impositivas.',
           ]}
         />
         <AccordionItem
           icon={<ContabilidadAuditoriaIcon />}
           text="Contabilidad y auditoría"
           description={[
-            'Gestión y análisis de registros contables, preparación de estados contables, auditorías internas y externas.',
+            'Gestión y análisis de registros contables.',
+            'Preparación de estados contables.',
+            'Auditorías internas y externas.',
           ]}
         />
         <AccordionItem
           icon={<LaboralIcon />}
           text="Laboral y RR.HH."
           description={[
-            'Apoyo integral en la búsqueda, selección y contratación de personal. Liquidación de salarios y confección de recibos de sueldo. Declaraciones de seguridad social.',
+            'Liquidación de salarios y confección de recibos de sueldo.',
+            'Declaraciones de seguridad social.',
+            'Apoyo integral en la búsqueda, selección y contratación de personal.',
           ]}
         />
         <AccordionItem
@@ -42,7 +49,7 @@ const ServicesAccordions = () => {
           ]}
         />
       </div>
-      <div className="flex flex-col gap-6">
+      <div className="flex w-full flex-col gap-6">
         <p className="font-bold text-2xl mb-2">
           NEGOCIOS Y REINGENIERÍA DE EMPRESAS
         </p>

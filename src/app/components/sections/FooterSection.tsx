@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import ContactIconItem from '../form/ContactIconItem';
 import MapsIcon from '../form/MapsIcon';
 import EmailIcon from '../form/PhoneIcon';
 import WhatsAppIcon from '../form/WhatsAppIcon';
@@ -25,6 +24,8 @@ const ContactInfo = () => (
     <Link
       className="flex gap-2 hover:underline"
       href="https://maps.app.goo.gl/fhrc2Egig33ris2q9"
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <MapsIcon />
       <span>Córdoba 1026, Rosario, Argentina</span>
@@ -79,7 +80,9 @@ const FooterSection = () => {
           Made by{' '}
           <Link
             className="underline-offset-2 underline"
-            href={'https://looopd.com'}
+            href="https://looopd.com"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Looopd
           </Link>

@@ -21,7 +21,6 @@ export default function Page() {
       <OurTeamSection />
       <OurClientsSection />
       <OurSpaceSection />
-      <OurSpaceSection />
       <PartnersSection />
     </div>
   );

@@ -3,7 +3,10 @@ import Image from 'next/image';
 
 const WhoAreWeSection = () => {
   return (
-    <section id='nosotros' className="w-full bg-black py-24 overflow-hidden relative">
+    <section
+      id="nosotros"
+      className="w-full bg-black py-24 overflow-hidden relative"
+    >
       <Image
         src="/hero/isotipo-2.png"
         width={600}

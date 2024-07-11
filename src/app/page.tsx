@@ -9,6 +9,7 @@ import OurTeamSection from './components/sections/OurTeamSection';
 import OurClientsSection from './components/sections/OurClientsSections';
 import OurSpaceSection from './components/sections/OurSpaceSection';
 import PartnersSection from './components/sections/PartnersSection';
+import FormSection from './components/sections/FormSection';
 
 export default function Page() {
   return (
@@ -22,6 +23,7 @@ export default function Page() {
       <OurClientsSection />
       <OurSpaceSection />
       <PartnersSection />
+      <FormSection />
     </div>
   );
 }

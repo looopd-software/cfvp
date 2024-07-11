@@ -23,11 +23,8 @@ const config: Config = {
         primary: 'var(--primary-color)',
         white: 'var(--white-color)',
         black: 'var(--black-color)',
-        'gray-100': '#F3F3F3',
-        'gray-200': '#F9F9FF',
-        'gray-300': '#9B9B9D',
-        'gray-500': '#5B5A62',
-        neutral: '#5B5A62',
+        gray: '#E0DAD6',
+        darkgray: '#595959',
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'sans-serif'],

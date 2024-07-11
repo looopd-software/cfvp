@@ -6,7 +6,6 @@ import LogisticaIcon from '../clients/LogisticaIcon';
 import RealEstateIcon from '../clients/RealEstateIcon';
 import SaludIcon from '../clients/SaludIcon';
 import ServiciosIcon from '../clients/ServiciosIcon';
-import TurismoIcon from '../clients/TurismoIcon';
 import Heading from '../common/Heading';
 
 interface IndustryItemProps {
@@ -15,9 +14,9 @@ interface IndustryItemProps {
 }
 const IndustryItem = ({ icon, title }: IndustryItemProps) => {
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center gap-2 w-[97px]">
       {icon}
-      <p className="text-center max-w-20">{title}</p>
+      <p className="text-center">{title}</p>
     </div>
   );
 };
@@ -51,7 +50,10 @@ const OurClientsSections = () => {
           pretenden impactar positivamente sobre los resultados de la compañía.
         </p>
         <div className="col-span-2 flex justify-end gap-7">
-          <IndustryItem title="Agropecuario" icon={<AgropecuarioIcon />} />
+          <IndustryItem
+            title="Actividad primaria"
+            icon={<AgropecuarioIcon />}
+          />
           <IndustryItem title="Comercio" icon={<ComercioIcon />} />
           <IndustryItem title="Industria" icon={<IndustriaIcon />} />
           <IndustryItem
@@ -61,7 +63,6 @@ const OurClientsSections = () => {
           <IndustryItem title="Real Estate" icon={<RealEstateIcon />} />
           <IndustryItem title="Salud" icon={<SaludIcon />} />
           <IndustryItem title="Servicios" icon={<ServiciosIcon />} />
-          <IndustryItem title="Turismo" icon={<TurismoIcon />} />
         </div>
       </div>
     </section>

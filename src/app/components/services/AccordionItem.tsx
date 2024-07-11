@@ -5,7 +5,7 @@ import React from 'react';
 interface AccordionItemProps {
   icon: React.ReactNode;
   text: string;
-  description: string | string[];
+  description: string[];
   activeColor?: string;
   defaultColor?: string;
 }
@@ -23,23 +23,15 @@ const AccordionItem = ({
     setIsOpen(!isOpen);
   };
 
-  const renderDescription = () => {
-    if (Array.isArray(description)) {
-      if (description.length > 1) {
-        return (
-          <ul className="list-disc ml-5">
-            {description.map((item, index) => (
-              <li key={index} className="mt-1">
-                {item}
-              </li>
-            ))}
-          </ul>
-        );
-      }
-      return <p className="font-sans mt-2">{description[0]}</p>;
-    }
-    return <p className="font-sans mt-2">{description}</p>;
-  };
+  const renderDescription = () => (
+    <ul className="list-disc ml-5">
+      {description.map((item, index) => (
+        <li key={index} className="mt-1">
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
 
   return (
     <div className="border-b-[#595959] border-b-[1px] flex flex-col pb-2 transition-all duration-200 max-w-full">

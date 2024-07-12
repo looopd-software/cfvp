@@ -1,6 +1,5 @@
 import React from 'react';
 import { Video } from '../common/Video';
-import Navbar from '../navbar/Navbar';
 import Image from 'next/image';
 
 const HeroVideo = () => {
@@ -16,24 +15,31 @@ const HeroVideo = () => {
   );
 };
 
-const HeroSection = () => {
+export default function HeroSection() {
   return (
-    <section id="hero" className="relative w-full h-screen flex justify-center">
-      <HeroVideo />
-      <Navbar />
-      <div className="flex flex-col relative w-full z-10 items-center justify-center h-full gap-10 max-w-desktop">
-        <Image
-          src={'/hero/logo.svg'}
-          alt="Logo de Castro Fernandez Vignau y Pianovi"
-          width={757}
-          height={332}
-        />
-        <h1 className="uppercase text-white text-[28px] leading-7 font-serif">
-          Profesionales en ciencias económicas
-        </h1>
+    <section
+      id="hero"
+      className="relative w-full h-screen flex justify-center"
+      style={{ clipPath: 'polygon(0% 0, 100% 0%, 100% 100%, 0 100%)' }}
+    >
+      <div className="fixed top-0 h-[800px] w-full">
+        <div className="relative w-full h-screen flex justify-center">
+          <HeroVideo />
+
+          <div className="flex flex-col relative w-full z-10 items-center justify-center h-full gap-10 max-w-desktop">
+            <Image
+              src={'/hero/logo.svg'}
+              alt="Logo de Castro Fernandez Vignau y Pianovi"
+              width={757}
+              height={332}
+            />
+            <h1 className="uppercase text-white text-[28px] leading-7 font-serif">
+              Profesionales en ciencias económicas
+            </h1>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default HeroSection;

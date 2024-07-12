@@ -11,12 +11,14 @@ import OurSpaceSection from './components/sections/OurSpaceSection';
 import PartnersSection from './components/sections/PartnersSection';
 import FormSection from './components/sections/FormSection';
 import FooterSection from './components/sections/FooterSection';
+import Navbar from './components/navbar/Navbar';
 
 export default function Page() {
   return (
     <div
       className={`${marcellus.variable} ${karla.variable} font-sans overflow-x-hidden`}
     >
+      <Navbar />
       <HeroSection />
       <WhoAreWeSection />
       <ServicesSection />

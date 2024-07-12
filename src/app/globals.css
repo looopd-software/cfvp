@@ -34,7 +34,6 @@
 
 html {
   background-color: #2a2929;
-  scroll-behavior: smooth;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }

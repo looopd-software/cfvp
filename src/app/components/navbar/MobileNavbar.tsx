@@ -21,7 +21,7 @@ const links = [
 const menuVariants = {
   hidden: { opacity: 0, x: '100%' },
   visible: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: '100%' },
+  exit: { opacity: 1, x: '100%' },
 };
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isMenuOpen, toggleMenu }) => {

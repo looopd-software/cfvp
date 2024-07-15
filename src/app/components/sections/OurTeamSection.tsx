@@ -3,7 +3,7 @@ import Heading from '../common/Heading';
 
 const OurTeamSection = () => {
   return (
-    <section id="nuestro-equipo" className="relative py-32 z-0">
+    <section id="equipo" className="relative py-32 z-0">
       <div className="absolute top-0 left-0 w-full h-full z-0 opacity-50">
         <Image
           src="/our-team/our-team-bg.jpg"

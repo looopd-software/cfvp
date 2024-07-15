@@ -1,7 +1,9 @@
 import NavLink from './NavLink';
-
-const NavLinks: React.FC = () => (
-  <div className="flex text-white gap-12 items-center">
+interface Props {
+  className: string;
+}
+const NavLinks: React.FC<Props> = ({ className }: Props) => (
+  <div className={`text-white gap-12 items-center ${className}`}>
     <NavLink href="#servicios">Servicios</NavLink>
     <NavLink href="#nosotros">Nosotros</NavLink>
     <NavLink href="#socios">Socios</NavLink>

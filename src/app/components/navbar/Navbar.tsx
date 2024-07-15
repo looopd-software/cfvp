@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
       variants={navbarVariants}
       transition={{ delay: 0.3, type: 'spring', stiffness: 100, damping: 20 }}
     >
-      <div className="flex justify-between w-full container items-center pt-4 mr-4">
+      <div className="flex justify-between w-full container items-center pt-4 mr-4 lg:mx-auto">
         <Link href="/">
           <Image
             src={'/hero/isotipo.png'}

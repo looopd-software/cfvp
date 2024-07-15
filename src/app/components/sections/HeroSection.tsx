@@ -58,7 +58,7 @@ export default function HeroSection() {
               />
             </motion.div>
             <motion.h1
-              className="uppercase text-center text-white text-xl lg:text-[28px] leading-7 font-serif px-2"
+              className="uppercase text-center text-white text-xl lg:text-[28px] leading-7 font-serif"
               initial="hidden"
               animate="visible"
               variants={heroTextVariants}

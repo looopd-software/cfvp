@@ -21,18 +21,18 @@ const Navbar: React.FC = () => {
 
   return (
     <motion.nav
-      className="fixed top-0 w-full px-auto z-50"
+      className="fixed top-0 w-full z-50"
       initial="hidden"
       animate="visible"
       variants={navbarVariants}
       transition={{ delay: 0.3, type: 'spring', stiffness: 100, damping: 20 }}
     >
-      <div className="flex justify-between w-full container items-center">
+      <div className="flex justify-between w-full container items-center pt-4 mr-4">
         <Link href="/">
           <Image
             src={'/hero/isotipo.png'}
-            width={62 * 1.5}
-            height={76 * 1.5}
+            width={40 * 0.8}
+            height={50 * 0.8}
             alt="Isotipo de Castro Fernandez Vignau y Pianovi"
           />
         </Link>

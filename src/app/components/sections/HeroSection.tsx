@@ -27,13 +27,15 @@ export default function HeroSection() {
           <HeroVideo />
 
           <div className="flex flex-col relative w-full z-10 items-center justify-center h-full gap-10 max-w-desktop">
-            <Image
-              src={'/hero/logo.svg'}
-              alt="Logo de Castro Fernandez Vignau y Pianovi"
-              width={757}
-              height={332}
-            />
-            <h1 className="uppercase text-white text-[28px] leading-7 font-serif">
+            <div className="relative w-full px-6 max-w-[757px] max-h-[332px]">
+              <Image
+                src={'/hero/logo.svg'}
+                alt="Logo de Castro Fernandez Vignau y Pianovi"
+                width={757}
+                height={332}
+              />
+            </div>
+            <h1 className="uppercase text-center text-white text-[28px] leading-7 font-serif">
               Profesionales en ciencias económicas
             </h1>
           </div>

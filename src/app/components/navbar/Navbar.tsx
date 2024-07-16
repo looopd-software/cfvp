@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
 
   return (
     <motion.nav
-      className="fixed top-0 w-full z-50"
+      className={`fixed top-0 w-full z-50 ${true ? ' pb-10 bg-gradient-to-b from-[#252525] to-transparent backdrop-blur-[2px]' : ''}`}
       initial="hidden"
       animate="visible"
       variants={navbarVariants}

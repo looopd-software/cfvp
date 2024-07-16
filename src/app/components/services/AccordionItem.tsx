@@ -26,7 +26,7 @@ const AccordionItem = ({
   const renderDescription = () => (
     <ul className="list-disc ml-5">
       {description.map((item, index) => (
-        <li key={index} className="mt-1">
+        <li key={index} className="mt-1 text-lg lg:text-xl">
           {item}
         </li>
       ))}

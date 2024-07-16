@@ -82,9 +82,11 @@ const ServicesAccordions = () => {
   ];
 
   return (
-    <div className="flex w-full justify-between gap-10">
+    <div className="flex flex-col lg:flex-row w-full justify-between gap-10 px-7">
       <div className="flex w-full flex-col gap-6">
-        <p className="font-bold text-2xl mb-2">SERVICIOS CONVENCIONALES</p>
+        <p className="font-bold text-xl lg:text-2xl mb-2">
+          SERVICIOS CONVENCIONALES
+        </p>
         {accordionItems.slice(0, 4).map((item, index) => (
           <AccordionItem
             key={index}
@@ -95,7 +97,7 @@ const ServicesAccordions = () => {
         ))}
       </div>
       <div className="flex w-full flex-col gap-6">
-        <p className="font-bold text-2xl mb-2">
+        <p className="font-bold text-xl lg:text-2xl mb-2">
           NEGOCIOS Y REINGENIERÍA DE EMPRESAS
         </p>
         {accordionItems.slice(4).map((item, index) => (

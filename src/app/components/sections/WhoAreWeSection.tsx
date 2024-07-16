@@ -11,7 +11,7 @@ const textVariants = {
 const WhoAreWeSection = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1, // Adjust this value to change the offset
+    threshold: 0.2,
   });
 
   return (

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Heading from '../common/Heading';
 import ServicesAccordions from '../services/ServiceAccordions';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -20,13 +21,18 @@ const itemVariants = {
 };
 
 const ServicesSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   return (
-    <section id="servicios" className="bg-white">
+    <section id="servicios" className="bg-white" ref={ref}>
       <motion.div
         className="flex flex-col justify-center items-center container py-20 gap-7 lg:py-32 lg:gap-12 max-w-desktop"
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
+        animate={inView ? 'visible' : 'hidden'}
       >
         <motion.div variants={itemVariants}>
           <Heading text="NUESTROS SERVICIOS" variant="dark" />

@@ -1,11 +1,24 @@
 import Heading from '../common/Heading';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+const textVariants = {
+  hidden: { y: '10%', opacity: 0 },
+  visible: { y: 0, opacity: 1 },
+};
 
 const WhoAreWeSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1, // Adjust this value to change the offset
+  });
+
   return (
     <section
       id="nosotros"
       className="w-full bg-black py-24 overflow-hidden relative"
+      ref={ref}
     >
       <Image
         src="/hero/isotipo-2.png"
@@ -14,16 +27,27 @@ const WhoAreWeSection = () => {
         alt="Isotipo de Castro Fernandez Vignau y Pianovi"
         className="absolute mix-blend-luminosity -top-1/2 opacity-50"
       />
-      <div className="relative flex flex-col items-center justify-center gap-11 z-0 max-w-desktop mx-auto">
+      <motion.div
+        initial="hidden"
+        animate={inView ? 'visible' : 'hidden'}
+        variants={textVariants}
+        transition={{
+          delay: 0.3,
+          type: 'spring',
+          stiffness: 100,
+          damping: 20,
+        }}
+        className="relative flex flex-col items-center justify-center gap-11 z-0 max-w-desktop mx-auto px-7"
+      >
         <Heading text="QUIÉNES SOMOS" variant="light" />
-        <p className="text-white text-2xl text-center">
+        <p className="text-white text-lg lg:text-2xl text-center">
           Somos un estudio de profesionales en ciencias económicas de la ciudad
           de Rosario. Nuestra misión es analizar y resolver problemas
           empresariales, comprometidos desde siempre con dos valores
           fundamentales: una sólida ética de trabajo, y el crecimiento de
           nuestros clientes.
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 };

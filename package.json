@@ -26,7 +26,8 @@
     "nodemailer": "^6.9.14",
     "react": "^18",
     "react-calendly": "^4.3.0",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-intersection-observer": "^9.13.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.5",

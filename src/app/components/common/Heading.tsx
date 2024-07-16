@@ -8,7 +8,7 @@ const Heading = ({ text, variant }: HeadingProps) => {
 
   return (
     <h2
-      className={`font-serif text-[42px] leading-[52px] uppercase ${textColor}`}
+      className={`font-serif text-3xl lg:text-[42px] leading-[52px] uppercase ${textColor}`}
     >
       {text}
     </h2>

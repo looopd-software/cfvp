@@ -66,8 +66,8 @@ export default function Form() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <div className="grid grid-cols-1 w-full md:grid-cols-2 gap-3">
+      <form onSubmit={handleSubmit} className="w-full px-7 max-w-[600px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3">
           <Input
             id="name"
             name="name"
@@ -96,7 +96,7 @@ export default function Form() {
             required={true}
             value={formData.email}
             onChange={handleInputChange}
-            wrapperWidthClassName="w-full col-span-2"
+            wrapperWidthClassName="w-full lg:col-span-2"
           />
           <Input
             id="company"
@@ -106,7 +106,7 @@ export default function Form() {
             required={false}
             value={formData.company}
             onChange={handleInputChange}
-            wrapperWidthClassName="w-full col-span-2"
+            wrapperWidthClassName="w-full lg:col-span-2"
           />
         </div>
         <TextArea

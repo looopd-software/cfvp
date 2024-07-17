@@ -18,7 +18,7 @@ export default function Button({
   return (
     <button
       type={type}
-      className={`py-2 px-10 rounded-lg ${colorClassName} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+      className={`w-full text-xl lg:w-auto py-2 px-10 rounded-lg ${colorClassName} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
       onClick={onClick}
       disabled={disabled}
     >

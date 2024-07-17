@@ -2,19 +2,19 @@ import { FC } from 'react';
 
 export const SwiperButtonPrev: FC = () => {
   return (
-    <div className="swiper-button-prev-custom">
+    <div className="swiper-button-prev-custom rounded-full bg-[#D9D9D9]">
       <svg
-        className="w-6 h-6 text-gray-700"
+        width="42"
+        height="42"
+        viewBox="0 0 42 42"
         fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M15 19l-7-7 7-7"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M21 42C32.598 42 42 32.598 42 21C42 9.40202 32.598 0 21 0C9.40202 0 0 9.40202 0 21C0 32.598 9.40202 42 21 42ZM27.5363 10.2941C27.5363 9.79176 27.333 9.30997 26.9711 8.95469C26.6092 8.59952 26.1183 8.4 25.6065 8.4C25.0947 8.4 24.6039 8.59952 24.2419 8.95469L13.323 19.672C12.9611 20.0273 12.7579 20.5091 12.7579 21.0114C12.7579 21.5138 12.9611 21.9956 13.323 22.3509L24.2419 33.0682C24.6059 33.4133 25.0935 33.6042 25.5996 33.5999C26.1057 33.5956 26.5898 33.3964 26.9476 33.0451C27.3055 32.6939 27.5085 32.2187 27.5129 31.7219C27.5173 31.2252 27.3227 30.7466 26.9711 30.3893L17.4169 21.0114L26.9711 11.6335C27.333 11.2783 27.5363 10.7965 27.5363 10.2941Z"
+          fill="#A3A3A3"
         />
       </svg>
     </div>

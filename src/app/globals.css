@@ -73,11 +73,10 @@ html {
   align-items: center;
 }
 
-
 .swiper-button-prev-custom,
 .swiper-button-next-custom {
   position: absolute;
-  top: 50%;
+  top: 10rem;
   transform: translateY(-50%);
   z-index: 10;
   cursor: pointer;

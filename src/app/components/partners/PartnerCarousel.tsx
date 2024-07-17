@@ -11,8 +11,9 @@ import Partner from './Partner';
 import { SwiperButtonNext } from './SwipperButtonNext';
 import { SwiperButtonPrev } from './SwipperButtonPrev';
 import PartnerDetails from './PartnerDetails';
+import { AnimatePresence, motion } from 'framer-motion';
 
-const MySwiperComponent: FC = () => {
+const PartnerSwiper: FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleSlideChange = (swiper: any) => {
@@ -26,15 +27,15 @@ const MySwiperComponent: FC = () => {
       breakpoints={{
         0: {
           slidesPerView: 1.7,
-          spaceBetween: 16,
+          spaceBetween: 8,
         },
         520: {
           slidesPerView: 2.5,
-          spaceBetween: 20,
+          spaceBetween: 8,
         },
         768: {
           slidesPerView: 3,
-          spaceBetween: 40,
+          spaceBetween: 16,
         },
       }}
       onSlideChange={handleSlideChange}
@@ -45,6 +46,8 @@ const MySwiperComponent: FC = () => {
       }}
       className="block lg:hidden w-full h-auto relative items-center"
     >
+      <SwiperButtonPrev />
+      <SwiperButtonNext />
       {partners.map((partner: PartnerProps, index: number) => (
         <SwiperSlide key={`partner-carousel-${index}`}>
           <Partner
@@ -53,19 +56,26 @@ const MySwiperComponent: FC = () => {
             lastName={partner.lastName}
             description={partner.description}
             selected={index === activeIndex}
-            imageClassName={
-              index === activeIndex ? 'w-full h-80' : 'w-full h-64'
-            }
+            className={index === activeIndex ? 'w-full' : 'w-4/5 mx-auto'}
+            imageClassName={index === activeIndex ? 'w-full h-80' : ' h-64'}
           />
         </SwiperSlide>
       ))}
       <div className="px-4 mt-10 w-full max-w-96 mx-auto">
-        <PartnerDetails partner={partners[activeIndex]} />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeIndex}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <PartnerDetails partner={partners[activeIndex]} />
+          </motion.div>
+        </AnimatePresence>
       </div>
-      <SwiperButtonPrev />
-      <SwiperButtonNext />
     </Swiper>
   );
 };
 
-export default MySwiperComponent;
+export default PartnerSwiper;

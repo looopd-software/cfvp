@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const ContactIcons = () => {
   return (
-    <div className="absolute bottom-4 right-4 flex flex-col gap-4 items-end">
+    <div className="absolute top-4 lg:top-auto lg:bottom-4 right-4 flex flex-col gap-4 items-end">
       <Link
         href="https://maps.app.goo.gl/fhrc2Egig33ris2q9"
         passHref

@@ -1,7 +1,7 @@
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import React, { useState } from 'react';
-import NavLinks from './NavLinks';
 import Link from 'next/link';
+import NavLinks from './NavLinks';
 import BurguerIcon from '../icons/BurguerIcon';
 import XIcon from '../icons/XIcon';
 import MobileNavbar from './MobileNavbar';
@@ -9,10 +9,34 @@ import { motion } from 'framer-motion';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    const heroSection = document.getElementById('hero');
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsScrolled(!entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0,
+      },
+    );
+
+    if (heroSection) {
+      observer.observe(heroSection);
+    }
+
+    return () => {
+      if (heroSection) {
+        observer.unobserve(heroSection);
+      }
+    };
+  }, []);
 
   const navbarVariants = {
     hidden: { y: '-50%', opacity: 0 },
@@ -21,13 +45,13 @@ const Navbar: React.FC = () => {
 
   return (
     <motion.nav
-      className={`fixed top-0 w-full z-50 ${true ? ' pb-10 bg-gradient-to-b from-[#252525] to-transparent backdrop-blur-[2px]' : ''}`}
+      className={`fixed top-0 w-full z-50 ${isScrolled ? 'bg-black' : 'bg-transparent'} transition-colors duration-300`}
       initial="hidden"
       animate="visible"
       variants={navbarVariants}
       transition={{ delay: 0.3, type: 'spring', stiffness: 100, damping: 20 }}
     >
-      <div className="flex justify-between w-full container items-center pt-4 mr-4 lg:mx-auto">
+      <div className="flex justify-between w-full container items-center py-4 mr-4 lg:mx-auto">
         <Link href="/">
           <Image
             src={'/hero/isotipo.png'}

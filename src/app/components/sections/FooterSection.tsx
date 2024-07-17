@@ -75,9 +75,9 @@ const FooterSection = () => {
         <NavigationLinks />
       </div>
       <div className="flex items-start w-full max-w-desktop container justify-between mt-6">
-        <p>Castro, Fernández, Vignau & Pianovi © 2024 </p>
+        <p>Castro, Fernández, Vignau & Pianovi © {new Date().getFullYear()}</p>
         <p>
-          Made by{' '}
+          Desarrollado por{' '}
           <Link
             className="underline-offset-2 underline"
             href="https://looopd.com"

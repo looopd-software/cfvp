@@ -1,13 +1,29 @@
 import Image from 'next/image';
+import { FC } from 'react';
 import { PartnerProps } from './PartnerProps';
 
-const Partner = ({ url, name, lastName, onClick, selected }: PartnerProps) => {
+interface PartnerComponentProps extends PartnerProps {
+  className?: string;
+  imageClassName?: string;
+}
+
+const Partner: FC<PartnerComponentProps> = ({
+  url,
+  name,
+  lastName,
+  onClick,
+  selected,
+  className,
+  imageClassName,
+}) => {
   return (
     <div
       onClick={onClick}
-      className={`relative flex flex-col text-white gap-2 border-b-[3px] cursor-pointer ${selected ? 'border-primary' : ''}`}
+      className={`relative flex flex-col text-white gap-2 border-b-[3px] cursor-pointer ${selected ? 'border-primary' : ''} ${className}`}
     >
-      <div className="relative w-full max-w-48 h-60 rounded-sm overflow-hidden">
+      <div
+        className={`relative lg:max-w-48 lg:h-60 rounded-sm overflow-hidden ${imageClassName} ${selected ? '' : 'grayscale'}`}
+      >
         <Image
           src={url}
           alt={`Foto de ${name} ${lastName}`}
@@ -15,7 +31,6 @@ const Partner = ({ url, name, lastName, onClick, selected }: PartnerProps) => {
           style={{
             objectFit: 'cover',
             objectPosition: 'top',
-            mixBlendMode: selected ? 'normal' : 'luminosity',
           }}
         />
       </div>

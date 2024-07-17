@@ -63,3 +63,30 @@ html {
   background-repeat: no-repeat;
   margin-right: 10px; /* Adjust the spacing as needed */
 }
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.swiper-button-prev-custom {
+  left: 10px;
+}
+
+.swiper-button-next-custom {
+  right: 10px;
+}

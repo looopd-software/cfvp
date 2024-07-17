@@ -4,6 +4,8 @@ import { PartnerProps } from '../partners/PartnerProps';
 import { partners } from '../partners/partners';
 import Partner from '../partners/Partner';
 import PartnerDetails from '../partners/PartnerDetails';
+import PartnerCarousel from '../partners/PartnerCarousel';
+import Heading from '../common/Heading';
 
 const getPartnerDetailsColSpan = (index: number): string => {
   if (index == 3) return 'col-span-2';
@@ -13,7 +15,12 @@ const getPartnerDetailsColSpan = (index: number): string => {
 
 const PartnersSection = () => {
   return (
-    <section id="socios" className="relative bg-black min-h-screen py-32">
+    <section
+      id="socios"
+      className="relative bg-black min-h-screen py-16 lg:py-32 flex flex-col items-center  gap-10"
+    >
+      <Heading text="Socios" variant="light" />
+      <PartnerCarousel />
       <PartnersDesktop />
     </section>
   );

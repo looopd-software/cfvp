@@ -35,8 +35,8 @@ const Partner: FC<PartnerComponentProps> = ({
         />
       </div>
       <div>
-        <p className="uppercase font-bold">{lastName} ,</p>
-        <p className="uppercase">{name}</p>
+        <p className="uppercase text-xl font-extrabold">{lastName} ,</p>
+        <p className="uppercase font-bold">{name}</p>
       </div>
     </div>
   );

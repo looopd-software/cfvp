@@ -7,7 +7,7 @@ const Partner = ({ url, name, lastName, onClick, selected }: PartnerProps) => {
       onClick={onClick}
       className={`relative flex flex-col text-white gap-2 border-b-[3px] cursor-pointer ${selected ? 'border-primary' : ''}`}
     >
-      <div className="relative w-48 h-60 rounded-sm overflow-hidden">
+      <div className="relative w-full max-w-48 h-60 rounded-sm overflow-hidden">
         <Image
           src={url}
           alt={`Foto de ${name} ${lastName}`}

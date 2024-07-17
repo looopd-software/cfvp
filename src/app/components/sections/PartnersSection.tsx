@@ -12,33 +12,39 @@ const getPartnerDetailsColSpan = (index: number): string => {
 };
 
 const PartnersSection = () => {
-  const [selectedPartnerIndex, setSelectedPartnerIndex] = useState<number>(0);
-
   return (
     <section id="socios" className="relative bg-black min-h-screen py-32">
-      <div className="container max-w-desktop grid grid-cols-5 gap-2">
-        {partners.map((partner: PartnerProps, index: number) => (
-          <div key={index} className="relative">
-            <Partner
-              url={partner.url}
-              name={partner.name}
-              lastName={partner.lastName}
-              description={partner.description}
-              selected={selectedPartnerIndex === index}
-              onClick={() => setSelectedPartnerIndex(index)}
-            />
-          </div>
-        ))}
-
-        {Array.from({ length: selectedPartnerIndex }, (_, index) => (
-          <div key={index}></div>
-        ))}
-        <div className={getPartnerDetailsColSpan(selectedPartnerIndex)}>
-          <PartnerDetails partner={partners[selectedPartnerIndex]} />
-        </div>
-      </div>
+      <PartnersDesktop />
     </section>
   );
 };
 
 export default PartnersSection;
+
+function PartnersDesktop() {
+  const [selectedPartnerIndex, setSelectedPartnerIndex] = useState<number>(0);
+
+  return (
+    <div className="hidden lg:grid container max-w-desktop grid-cols-5 gap-2">
+      {partners.map((partner: PartnerProps, index: number) => (
+        <div key={index} className="relative">
+          <Partner
+            url={partner.url}
+            name={partner.name}
+            lastName={partner.lastName}
+            description={partner.description}
+            selected={selectedPartnerIndex === index}
+            onClick={() => setSelectedPartnerIndex(index)}
+          />
+        </div>
+      ))}
+
+      {Array.from({ length: selectedPartnerIndex }, (_, index) => (
+        <div key={index}></div>
+      ))}
+      <div className={getPartnerDetailsColSpan(selectedPartnerIndex)}>
+        <PartnerDetails partner={partners[selectedPartnerIndex]} />
+      </div>
+    </div>
+  );
+}

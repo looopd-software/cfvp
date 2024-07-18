@@ -46,35 +46,52 @@ const ContactInfo = () => (
 
 const NavigationLinks = () => (
   <div className="flex flex-col items-start gap-3">
-    <p className="font-bold mb-4">NOSOTROS</p>
-    <Link className="hover:underline" href={'#servicios'}>
-      Servicios
-    </Link>
-    <Link className="hover:underline" href={'#nosotros'}>
-      Nosotros
-    </Link>
-    <Link className="hover:underline" href={'#socios'}>
-      Socios
-    </Link>
-    <Link className="hover:underline" href={'#clientes'}>
-      Clientes
-    </Link>
-    <Link className="hover:underline" href={'#contacto'}>
-      Contacto
-    </Link>
+    <p className="font-bold">NOSOTROS</p>
+    <div className="flex flex-col items-start gap-1">
+      <Link
+        className="font-normal text-sm hover:underline leading-[21px]"
+        href={'#servicios'}
+      >
+        Servicios
+      </Link>
+      <Link
+        className="font-normal text-sm hover:underline leading-[21px]"
+        href={'#nosotros'}
+      >
+        Nosotros
+      </Link>
+      <Link
+        className="font-normal text-sm hover:underline leading-[21px]"
+        href={'#socios'}
+      >
+        Socios
+      </Link>
+      <Link
+        className="font-normal text-sm hover:underline leading-[21px]"
+        href={'#clientes'}
+      >
+        Clientes
+      </Link>
+      <Link
+        className="font-normal text-sm hover:underline leading-[21px]"
+        href={'#contacto'}
+      >
+        Contacto
+      </Link>
+    </div>
   </div>
 );
 
 const FooterSection = () => {
   return (
     <section id="footer" className="relative bg-black pt-20 pb-4 text-white">
-      <div className="flex items-start w-full max-w-desktop container justify-between">
+      <div className="flex flex-col md:flex-row items-start w-full max-w-desktop container justify-between">
         <Logo />
         <div className="w-1/4"></div>
         <ContactInfo />
         <NavigationLinks />
       </div>
-      <div className="flex items-start w-full max-w-desktop container justify-between mt-6">
+      <div className="flex flex-col md:flex-row items-start w-full max-w-desktop container justify-between mt-6">
         <p>Castro, Fernández, Vignau & Pianovi © {new Date().getFullYear()}</p>
         <p>
           Desarrollado por{' '}

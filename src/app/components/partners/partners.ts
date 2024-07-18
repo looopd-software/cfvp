@@ -40,8 +40,8 @@ export const partners: PartnerProps[] = [
   },
   {
     url: '/partners/vignau.jpg',
-    name: 'Walter Gustavo',
-    lastName: 'Castro',
+    name: 'Mateo',
+    lastName: 'Vignau',
     description: [
       'Contador Público Nacional por la Universidad Nacional de Rosario',
     ],

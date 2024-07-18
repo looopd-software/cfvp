@@ -15,18 +15,25 @@ export default function PartnersDesktop() {
   const [selectedPartnerIndex, setSelectedPartnerIndex] = useState<number>(0);
 
   return (
-    <div className="hidden lg:grid container max-w-desktop grid-cols-5 gap-2">
+    <div className="hidden lg:grid container max-w-desktop grid-cols-5 gap-4">
       {partners.map((partner: PartnerProps, index: number) => (
-        <div key={index} className="relative">
+        <motion.div
+          key={index}
+          className="relative"
+          whileHover={{ scale: 1.05 }}
+          onClick={() => setSelectedPartnerIndex(index)}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
           <Partner
             url={partner.url}
             name={partner.name}
             lastName={partner.lastName}
             description={partner.description}
             selected={selectedPartnerIndex === index}
-            onClick={() => setSelectedPartnerIndex(index)}
           />
-        </div>
+        </motion.div>
       ))}
 
       {Array.from({ length: selectedPartnerIndex }, (_, index) => (

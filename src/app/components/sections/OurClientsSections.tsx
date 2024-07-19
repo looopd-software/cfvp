@@ -23,32 +23,44 @@ const IndustryItem = ({ icon, title }: IndustryItemProps) => {
 
 const OurClientsSections = () => {
   return (
-    <section id="clientes" className="relative bg-white overflow-hidden">
-      <Image
-        src="/hero/isotipo-2.png"
-        width={600}
-        height={1000}
-        alt="Isotipo de Castro Fernandez Vignau y Pianovi"
-        className="absolute"
-      />
-      <div className="grid grid-cols-2  gap-y-20 container max-w-desktop py-32">
-        <Heading text="NUESTROS CLIENTES" variant="dark" />
-        <p className="text-lg">
-          Dirigimos nuestros servicios principalmente a empresas medianas de la
-          región, muchas veces organizadas bajo el formato de empresas
-          familiares, ya sean industriales, comerciales o de servicios.
-          <br />
-          <br />
-          Estamos preparados para ofrecer soluciones tanto a corto como a largo
-          plazo, desde intervenciones puntuales y transitorias hasta soluciones
-          de consultoría permanente destinadas a estrechar y fortalecer la
-          relación con nuestros clientes.
-          <br />
-          <br />
-          Nuestra firma trasciende los límites habituales de un estudio
-          contable, asumiendo funciones de asesoramiento y consultoría que
-          pretenden impactar positivamente sobre los resultados de la compañía.
-        </p>
+    <section
+      id="clientes"
+      className="relative flex justify-center bg-white overflow-hidden"
+    >
+      <div className="absolute top-0 right-0 w-full">
+        <Image
+          src="/hero/isotipo-2.png"
+          width={600}
+          height={1000}
+          alt="Isotipo de Castro Fernandez Vignau y Pianovi"
+          className="absolute"
+          unselectable="on"
+          draggable={false}
+        />
+      </div>
+      <div className="container py-16 md:py-40 flex-col justify-start items-end gap-20 inline-flex">
+        <div className="px-7 flex-col md:flex-row justify-start md:justify-between items-center md:items-start gap-5 inline-flex text-center md:text-left">
+          <div className="grow shrink basis-0">
+            <Heading text="NUESTROS CLIENTES" variant="dark" />
+          </div>
+          <p className="grow shrink basis-0 text-base font-normal md:text-lg">
+            Dirigimos nuestros servicios principalmente a empresas medianas de
+            la región, muchas veces organizadas bajo el formato de empresas
+            familiares, ya sean industriales, comerciales o de servicios.
+            <br />
+            <br />
+            Estamos preparados para ofrecer soluciones tanto a corto como a
+            largo plazo, desde intervenciones puntuales y transitorias hasta
+            soluciones de consultoría permanente destinadas a estrechar y
+            fortalecer la relación con nuestros clientes.
+            <br />
+            <br />
+            Nuestra firma trasciende los límites habituales de un estudio
+            contable, asumiendo funciones de asesoramiento y consultoría que
+            pretenden impactar positivamente sobre los resultados de la
+            compañía.
+          </p>
+        </div>
         <div className="col-span-2 flex justify-end gap-7">
           <IndustryItem
             title="Actividad primaria"

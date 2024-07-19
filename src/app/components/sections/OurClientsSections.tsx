@@ -9,6 +9,10 @@ import ServiciosIcon from '../clients/ServiciosIcon';
 import Heading from '../common/Heading';
 import { Swiper } from 'swiper/react';
 import { SwiperSlide } from 'swiper/react';
+import SwiperCore from 'swiper';
+import { Autoplay } from 'swiper/modules';
+
+SwiperCore.use([Autoplay]);
 
 interface IndustryItemProps {
   icon: React.ReactNode;
@@ -37,7 +41,7 @@ const OurClientsSections = () => {
   return (
     <section
       id="clientes"
-      className="relative flex flex-col py-20 md:py-40 gap-20 justify-center bg-white overflow-hidden"
+      className="relative flex flex-col py-20 md:py-40 gap-10 justify-center bg-white overflow-hidden"
     >
       <div className="absolute top-0 right-0 w-full">
         <Image
@@ -87,6 +91,10 @@ const OurClientsSections = () => {
 
       <Swiper
         loop={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
         centeredSlides={true}
         slidesPerView={3.75}
         className="flex md:hidden w-full"

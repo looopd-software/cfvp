@@ -31,7 +31,7 @@ const OurTeamSection = () => {
   });
 
   return (
-    <section id="equipo" className="relative pt-7 lg:py-32 z-0" ref={ref}>
+    <section id="equipo" className="relative pt-32 lg:py-32 z-0" ref={ref}>
       <TeamBackground />
       <motion.div
         className={`relative flex flex-col items-center justify-center max-w-desktop w-full lg:px-7 mx-auto gap-10 z-10 lg:flex-row lg:items-start`}
@@ -66,9 +66,7 @@ const OurTeamSection = () => {
               src="/our-team/our-team.jpg"
               alt="Imagen de nuestro equipo trabajando"
               fill
-              style={{
-                objectFit: 'cover',
-              }}
+              objectFit="cover"
               className="rounded-[4px]"
             />
           </motion.div>

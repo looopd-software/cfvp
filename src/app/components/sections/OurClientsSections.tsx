@@ -7,6 +7,8 @@ import RealEstateIcon from '../clients/RealEstateIcon';
 import SaludIcon from '../clients/SaludIcon';
 import ServiciosIcon from '../clients/ServiciosIcon';
 import Heading from '../common/Heading';
+import { Swiper } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
 
 interface IndustryItemProps {
   icon: React.ReactNode;
@@ -22,10 +24,20 @@ const IndustryItem = ({ icon, title }: IndustryItemProps) => {
 };
 
 const OurClientsSections = () => {
+  const industryItems = [
+    { title: 'Actividad primaria', icon: <AgropecuarioIcon /> },
+    { title: 'Comercio', icon: <ComercioIcon /> },
+    { title: 'Industria', icon: <IndustriaIcon /> },
+    { title: 'Logística y distribución', icon: <LogisticaIcon /> },
+    { title: 'Real Estate', icon: <RealEstateIcon /> },
+    { title: 'Salud', icon: <SaludIcon /> },
+    { title: 'Servicios', icon: <ServiciosIcon /> },
+  ];
+
   return (
     <section
       id="clientes"
-      className="relative flex justify-center bg-white overflow-hidden"
+      className="relative flex flex-col py-20 md:py-40 gap-20 justify-center bg-white overflow-hidden"
     >
       <div className="absolute top-0 right-0 w-full">
         <Image
@@ -38,7 +50,7 @@ const OurClientsSections = () => {
           draggable={false}
         />
       </div>
-      <div className="container py-16 md:py-40 flex-col justify-start items-end gap-20 inline-flex">
+      <div className="container flex-col justify-start items-end gap-20 inline-flex">
         <div className="px-7 flex-col md:flex-row justify-start md:justify-between items-center md:items-start gap-5 inline-flex text-center md:text-left">
           <div className="grow shrink basis-0">
             <Heading text="NUESTROS CLIENTES" variant="dark" />
@@ -61,22 +73,30 @@ const OurClientsSections = () => {
             compañía.
           </p>
         </div>
-        <div className="col-span-2 flex justify-end gap-7">
-          <IndustryItem
-            title="Actividad primaria"
-            icon={<AgropecuarioIcon />}
-          />
-          <IndustryItem title="Comercio" icon={<ComercioIcon />} />
-          <IndustryItem title="Industria" icon={<IndustriaIcon />} />
-          <IndustryItem
-            title="Logística y distribución"
-            icon={<LogisticaIcon />}
-          />
-          <IndustryItem title="Real Estate" icon={<RealEstateIcon />} />
-          <IndustryItem title="Salud" icon={<SaludIcon />} />
-          <IndustryItem title="Servicios" icon={<ServiciosIcon />} />
+
+        <div className="hidden md:flex justify-end gap-7">
+          {industryItems.map((item) => (
+            <IndustryItem
+              key={item.title}
+              title={item.title}
+              icon={item.icon}
+            />
+          ))}
         </div>
       </div>
+
+      <Swiper
+        loop={true}
+        centeredSlides={true}
+        slidesPerView={3.75}
+        className="flex md:hidden w-full"
+      >
+        {industryItems.map((item) => (
+          <SwiperSlide key={item.title} className="" style={{ width: '97px' }}>
+            <IndustryItem title={item.title} icon={item.icon} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };

@@ -19,13 +19,6 @@ const ContactIcons = () => {
         </ContactIconItem>
       </Link>
 
-      <Link href="tel:+54 9 3416 25-3526" passHref>
-        <ContactIconItem>
-          <WhatsAppIcon />
-          <span>(704) 555-0127</span>
-        </ContactIconItem>
-      </Link>
-
       <Link href="mailto:contacto@cfvp.com.ar">
         <ContactIconItem>
           <EmailIcon />

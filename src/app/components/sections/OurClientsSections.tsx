@@ -7,10 +7,11 @@ import RealEstateIcon from '../clients/RealEstateIcon';
 import SaludIcon from '../clients/SaludIcon';
 import ServiciosIcon from '../clients/ServiciosIcon';
 import Heading from '../common/Heading';
-import { Swiper } from 'swiper/react';
-import { SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore from 'swiper';
 import { Autoplay } from 'swiper/modules';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 SwiperCore.use([Autoplay]);
 
@@ -18,16 +19,44 @@ interface IndustryItemProps {
   icon: React.ReactNode;
   title: string;
 }
+
 const IndustryItem = ({ icon, title }: IndustryItemProps) => {
   return (
-    <div className="flex flex-col items-center gap-2 w-[97px]">
+    <motion.div className="flex flex-col items-center gap-2 w-[97px]">
       {icon}
       <p className="text-center">{title}</p>
-    </div>
+    </motion.div>
   );
 };
 
 const OurClientsSections = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.4,
+  });
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const swiperItemVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
   const industryItems = [
     { title: 'Actividad primaria', icon: <AgropecuarioIcon /> },
     { title: 'Comercio', icon: <ComercioIcon /> },
@@ -42,6 +71,7 @@ const OurClientsSections = () => {
     <section
       id="clientes"
       className="relative flex flex-col py-20 md:py-40 gap-10 justify-center bg-white overflow-hidden"
+      ref={ref}
     >
       <div className="absolute top-0 right-0 w-full">
         <Image
@@ -54,12 +84,20 @@ const OurClientsSections = () => {
           draggable={false}
         />
       </div>
-      <div className="container flex-col justify-start items-end gap-20 inline-flex">
-        <div className="px-7 flex-col md:flex-row justify-start md:justify-between items-center md:items-start gap-5 inline-flex text-center md:text-left">
-          <div className="grow shrink basis-0">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate={inView ? 'visible' : 'hidden'}
+        className="container flex-col justify-start items-end gap-20 inline-flex"
+      >
+        <motion.div
+          variants={itemVariants}
+          className="flex-col md:flex-row justify-start md:justify-between items-center md:items-start gap-5 inline-flex text-center md:text-left"
+        >
+          <div className="grow shrink basis-0 px-6">
             <Heading text="NUESTROS CLIENTES" variant="dark" />
           </div>
-          <p className="grow shrink basis-0 text-base font-normal md:text-lg">
+          <p className="grow shrink basis-0 text-base font-normal px-7 md:text-lg">
             Dirigimos nuestros servicios principalmente a empresas medianas de
             la región, muchas veces organizadas bajo el formato de empresas
             familiares, ya sean industriales, comerciales o de servicios.
@@ -76,18 +114,17 @@ const OurClientsSections = () => {
             pretenden impactar positivamente sobre los resultados de la
             compañía.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="hidden md:flex justify-end gap-7">
+        <motion.div
+          variants={itemVariants}
+          className="hidden md:flex justify-end gap-7"
+        >
           {industryItems.map((item) => (
-            <IndustryItem
-              key={item.title}
-              title={item.title}
-              icon={item.icon}
-            />
+            <IndustryItem key={item.title} title={item.title} icon={item.icon} />
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <Swiper
         loop={true}
@@ -101,7 +138,13 @@ const OurClientsSections = () => {
       >
         {industryItems.map((item) => (
           <SwiperSlide key={item.title} className="" style={{ width: '97px' }}>
-            <IndustryItem title={item.title} icon={item.icon} />
+            <motion.div
+              variants={swiperItemVariants}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+            >
+              <IndustryItem title={item.title} icon={item.icon} />
+            </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>

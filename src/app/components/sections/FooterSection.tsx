@@ -37,15 +37,6 @@ const ContactInfo = () => (
       </Link>
       <Link
         className="justify-center items-start gap-2 inline-flex hover:underline"
-        href="tel:+54 9 3416 25-3526"
-      >
-        <div className="w-4 h-[20.85px] relative">
-          <Image src={'/icons/whatsapp.svg'} alt="Icono de WhatsApp" fill />
-        </div>
-        <span>(704) 555-0127</span>
-      </Link>
-      <Link
-        className="justify-center items-start gap-2 inline-flex hover:underline"
         href="mailto:contacto@cfvp.com.ar"
       >
         <div className="w-4 h-[20.85px] relative">

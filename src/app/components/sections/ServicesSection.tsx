@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Heading from '../common/Heading';
 import ServicesAccordions from '../services/ServiceAccordions';
 import { motion } from 'framer-motion';

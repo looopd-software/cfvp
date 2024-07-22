@@ -42,7 +42,7 @@ const OurClientsSections = () => {
       y: 0,
       transition: {
         duration: 0.5,
-        staggerChildren: 0.3,
+        staggerChildren: 0.5,
       },
     },
   };

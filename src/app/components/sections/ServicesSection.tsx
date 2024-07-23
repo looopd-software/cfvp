@@ -36,7 +36,7 @@ const ServicesSection = () => {
         <motion.div variants={itemVariants}>
           <Heading text="NUESTROS SERVICIOS" variant="dark" />
         </motion.div>
-        <motion.p className="text-center px-7" variants={itemVariants}>
+        <motion.p className="text-center" variants={itemVariants}>
           Nos distinguimos en el mercado por ofrecer soluciones integrales,
           incluso en los servicios más convencionales. Contamos con el know-how
           para asesorar, pero también para involucrarnos en la gestión de la

@@ -47,7 +47,7 @@ const AccordionItem = ({
               color: isOpen ? activeColor : defaultColor,
             })}
           </div>
-          <p className="font-semibold text-xl max-w-[330px]">{text}</p>
+          <p className="font-semibold text-lg lg:text-xl leading-6">{text}</p>
         </div>
         <div
           className={`transform transition-transform duration-200 ${isOpen ? 'rotate-180' : 'rotate-0'}`}

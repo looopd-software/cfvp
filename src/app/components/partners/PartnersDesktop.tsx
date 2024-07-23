@@ -20,7 +20,7 @@ export default function PartnersDesktop() {
         <motion.div
           key={index}
           className="relative"
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.02 }}
           onClick={() => setSelectedPartnerIndex(index)}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

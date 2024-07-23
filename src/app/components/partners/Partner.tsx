@@ -19,7 +19,7 @@ const Partner: FC<PartnerComponentProps> = ({
   return (
     <div
       onClick={onClick}
-      className={`relative flex flex-col text-white gap-2 border-b-[3px] cursor-pointer ${selected ? 'border-primary' : ''} ${className}`}
+      className={`relative flex flex-col min-w-[192px] text-white gap-2 border-b-[3px] cursor-pointer ${className}`}
     >
       <div
         className={`relative lg:max-w-48 lg:h-60 rounded-sm overflow-hidden ${imageClassName} ${selected ? '' : 'grayscale'}`}

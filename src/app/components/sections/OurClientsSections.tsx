@@ -36,7 +36,7 @@ const OurClientsSections = () => {
   });
 
   const containerVariants = {
-    hidden: { opacity: 0, x: 50 },
+    hidden: { opacity: 0, x: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -48,8 +48,8 @@ const OurClientsSections = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+    hidden: { opacity: 0, x: -10 },
+    visible: { opacity: 1, x: 0 },
   };
 
   const swiperItemVariants = {

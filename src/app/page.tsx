@@ -35,11 +35,11 @@ export default function Page() {
       <Navbar />
       <HeroSection />
       <WhoAreWeSection />
+      <PartnersSection />
       <ServicesSection />
       <OurTeamSection />
       <OurClientsSection />
       <OurSpaceSection />
-      <PartnersSection />
       <FormSection />
       <FooterSection />
     </div>

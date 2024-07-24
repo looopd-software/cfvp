@@ -17,7 +17,7 @@ const WhoAreWeSection = () => {
   return (
     <section
       id="nosotros"
-      className="w-full bg-black py-24 overflow-hidden relative"
+      className="w-full bg-white py-24 overflow-hidden relative"
       ref={ref}
     >
       <Image
@@ -25,7 +25,7 @@ const WhoAreWeSection = () => {
         width={600}
         height={1000}
         alt="Isotipo de Castro Fernandez Vignau y Pianovi"
-        className="absolute mix-blend-luminosity -top-1/2 opacity-50"
+        className="absolute mix-blend-luminosity -top-1/2 opacity-70"
       />
       <motion.div
         initial="hidden"
@@ -39,8 +39,8 @@ const WhoAreWeSection = () => {
         }}
         className="relative flex flex-col items-center justify-center gap-11 z-0 max-w-desktop mx-auto px-7"
       >
-        <Heading text="QUIÉNES SOMOS" variant="light" />
-        <p className="text-white text-lg lg:text-2xl text-center">
+        <Heading text="QUIÉNES SOMOS" variant="dark" />
+        <p className="text-black text-lg lg:text-2xl text-center">
           Somos un estudio de profesionales en ciencias económicas de la ciudad
           de Rosario. Nuestra misión es analizar y resolver problemas
           empresariales, comprometidos desde siempre con dos valores

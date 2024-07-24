@@ -17,9 +17,12 @@ const ContactIcons = () => {
   };
 
   return (
-    <div ref={ref} className="absolute top-4 lg:top-auto lg:bottom-4 right-4 flex flex-col gap-4 items-end">
+    <div
+      ref={ref}
+      className="absolute top-4 lg:top-auto lg:bottom-4 right-4 flex flex-col gap-4 items-end"
+    >
       <Link
-        href="https://maps.app.goo.gl/fhrc2Egig33ris2q9"
+        href="https://maps.app.goo.gl/r6wEVvH7MVenPK1y7"
         passHref
         target="_blank"
         rel="noopener noreferrer"
@@ -31,7 +34,7 @@ const ContactIcons = () => {
         >
           <ContactIconItem>
             <MapsIcon />
-            <span>Córdoba 1026, Rosario, Argentina</span>
+            <span>Córdoba 1015, Piso 1 Oficina 1, Rosario, Argentina</span>
           </ContactIconItem>
         </motion.div>
       </Link>

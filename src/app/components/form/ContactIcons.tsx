@@ -34,7 +34,12 @@ const ContactIcons = () => {
         >
           <ContactIconItem>
             <MapsIcon />
-            <span>Córdoba 1015, Piso 1 Oficina 1, Rosario, Argentina</span>
+            <span>
+              Córdoba 1015, Piso 1 Oficina 1{' '}
+              <span className="hidden lg:inline">, </span>
+              <span className="block lg:hidden"></span>
+              Rosario, Argentina
+            </span>
           </ContactIconItem>
         </motion.div>
       </Link>

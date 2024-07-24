@@ -22,7 +22,7 @@ const ContactInfo = () => (
     <div className="flex-col justify-end items-start gap-2 inline-flex">
       <Link
         className="justify-center items-start gap-2 inline-flex hover:underline"
-        href="https://maps.app.goo.gl/fhrc2Egig33ris2q9"
+        href="https://maps.app.goo.gl/r6wEVvH7MVenPK1y7"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -33,7 +33,7 @@ const ContactInfo = () => (
             fill
           />
         </div>
-        <span>Córdoba 1026, Rosario, Argentina</span>
+        <span>Córdoba 1015, Piso 1 Oficina 1, Rosario, Argentina</span>
       </Link>
       <Link
         className="justify-center items-start gap-2 inline-flex hover:underline"

@@ -36,20 +36,20 @@ const OurClientsSections = () => {
   });
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, x: 50 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
-        staggerChildren: 0.5,
+        duration: 0.6,
+        staggerChildren: 0.4,
       },
     },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
   };
 
   const swiperItemVariants = {
@@ -121,7 +121,11 @@ const OurClientsSections = () => {
           className="hidden md:flex justify-end gap-7"
         >
           {industryItems.map((item) => (
-            <IndustryItem key={item.title} title={item.title} icon={item.icon} />
+            <IndustryItem
+              key={item.title}
+              title={item.title}
+              icon={item.icon}
+            />
           ))}
         </motion.div>
       </motion.div>

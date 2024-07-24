@@ -17,7 +17,10 @@ const ContactIcons = () => {
   };
 
   return (
-    <div ref={ref} className="absolute top-4 lg:top-auto lg:bottom-4 right-4 flex flex-col gap-4 items-end">
+    <div
+      ref={ref}
+      className="absolute top-4 lg:top-auto lg:bottom-4 right-4 flex flex-col gap-4 items-end"
+    >
       <Link
         href="https://maps.app.goo.gl/r6wEVvH7MVenPK1y7"
         passHref

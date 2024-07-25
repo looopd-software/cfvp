@@ -18,13 +18,13 @@ export async function POST(req: NextRequest) {
     const mailOptions: nodemailer.SendMailOptions = {
       from: process.env.MAIL_USERNAME,
       to: process.env.MAIL_RECIPIENT,
-      subject: `Mensaje nuevo del formulario de parte de : ${form.email}`,
+      subject: `Mensaje nuevo del formulario de parte de : ${form.email ?? ''}`,
       html: `
-        <p>Nombre: ${form.name}</p>
-        <p>Email: ${form.email}</p>
-        <p>Telefono: ${form.phone}</p>
-        <p>Empresa: ${form.company}</p>
-        <p>Mensaje: ${form.message}</p>
+        <p>Nombre: <strong>${form.name ?? ''}</strong></p>
+        <p>Email: <strong>${form.email ?? ''}</strong></p>
+        <p>Telefono: <strong>${form.phone ?? ''}</strong></p>
+        <p>Empresa: <strong>${form.company ?? ''}</strong></p>
+        <p>Mensaje: <strong>${form.message ?? ''}</strong></p>
       `,
     };
 

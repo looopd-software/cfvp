@@ -1,7 +1,7 @@
 import React from 'react';
-import { Video } from '../common/Video';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import HeroVideo from '../hero/HeroVideo';
 
 const heroImageVariants = {
   hidden: { y: '10%', opacity: 0 },
@@ -13,20 +13,7 @@ const heroTextVariants = {
   visible: { y: 0, opacity: 1 },
 };
 
-const HeroVideo = () => {
-  return (
-    <React.Fragment>
-      <div className="w-full h-full bg-[#1A1A1AA6] absolute top-0 left-0 z-0"></div>
-      <Video
-        className={`absolute object-cover w-full h-full overflow-visible -z-10
-        lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2`}
-        path="/hero/hero-video.mp4"
-      />
-    </React.Fragment>
-  );
-};
-
-export default function HeroSection() {
+const HeroSection: React.FC = () => {
   return (
     <section
       id="hero"
@@ -76,4 +63,6 @@ export default function HeroSection() {
       </div>
     </section>
   );
-}
+};
+
+export default HeroSection;

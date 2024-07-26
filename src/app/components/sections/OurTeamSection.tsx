@@ -66,7 +66,9 @@ const OurTeamSection = () => {
               src="/our-team/our-team.jpg"
               alt="Imagen de nuestro equipo trabajando"
               fill
-              objectFit="cover"
+              style={{
+                objectFit: 'cover',
+              }}
               className="rounded-[4px]"
             />
           </motion.div>

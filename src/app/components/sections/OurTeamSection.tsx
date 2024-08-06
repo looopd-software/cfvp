@@ -31,7 +31,12 @@ const OurTeamSection = () => {
   });
 
   return (
-    <section id="equipo" className="relative pt-32 lg:py-32 z-0" ref={ref}>
+    <section
+      id="equipo"
+      className="relative pt-32 lg:py-32 z-0"
+      ref={ref}
+      aria-labelledby="nuestro-equipo-titulo"
+    >
       <TeamBackground />
       <motion.div
         className={`relative flex flex-col items-center justify-center max-w-desktop w-full lg:px-7 mx-auto gap-10 z-10 lg:flex-row lg:items-start`}
@@ -39,7 +44,11 @@ const OurTeamSection = () => {
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
       >
-        <Heading text="NUESTRO EQUIPO" variant="light" />
+        <Heading
+          id="nuestro-equipo-titulo"
+          text="NUESTRO EQUIPO"
+          variant="light"
+        />
         <motion.div
           className="w-full text-center lg:text-left lg:max-w-[700px]"
           variants={containerVariants}
@@ -83,10 +92,13 @@ export default OurTeamSection;
 function TeamBackground() {
   return (
     <>
-      <div className="absolute top-0 left-0 w-full h-full z-0 opacity-50">
+      <div
+        className="absolute top-0 left-0 w-full h-full z-0 opacity-50"
+        aria-hidden="true"
+      >
         <Image
           src="/our-team/our-team-bg.jpg"
-          alt="Imagen de nuestro equipo trabajando"
+          alt="Fondo de nuestro equipo trabajando"
           fill
           style={{
             objectFit: 'cover',
@@ -94,7 +106,10 @@ function TeamBackground() {
           }}
         />
       </div>
-      <div className="absolute top-0 left-0 bg-black w-full h-full z-0 opacity-85"></div>
+      <div
+        className="absolute top-0 left-0 bg-black w-full h-full z-0 opacity-85"
+        aria-hidden="true"
+      ></div>
     </>
   );
 }

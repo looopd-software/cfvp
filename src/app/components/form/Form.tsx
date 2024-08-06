@@ -66,7 +66,14 @@ export default function Form() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="w-full px-7 max-w-[600px]">
+      <form
+        onSubmit={handleSubmit}
+        className="w-full px-7 max-w-[600px]"
+        aria-describedby="form-description"
+      >
+        <p id="form-description" className="sr-only">
+          Formulario de contacto para enviar un mensaje a nuestra empresa.
+        </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3">
           <Input
             id="name"
@@ -121,7 +128,7 @@ export default function Form() {
           wrapperWidthClassName="w-full"
         />
 
-        <Button type="submit">
+        <Button type="submit" aria-busy={isLoading}>
           {isLoading ? (
             <div className="w-full flex place-content-center">
               <Spinner />
@@ -131,7 +138,7 @@ export default function Form() {
           )}
         </Button>
       </form>
-      <div id="toast-container">
+      <div id="toast-container" aria-live="polite">
         {toast && (
           <Toast
             type={toast.type}

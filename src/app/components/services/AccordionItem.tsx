@@ -38,6 +38,16 @@ const AccordionItem = ({
       <div
         className="flex items-center justify-between gap-3 cursor-pointer"
         onClick={toggleAccordion}
+        aria-expanded={isOpen}
+        aria-controls={`content-${text.replace(/\s+/g, '-').toLowerCase()}`}
+        id={`header-${text.replace(/\s+/g, '-').toLowerCase()}`}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            toggleAccordion();
+          }
+        }}
       >
         <div className="flex items-center gap-3">
           <div
@@ -45,6 +55,7 @@ const AccordionItem = ({
           >
             {React.cloneElement(icon as React.ReactElement<any>, {
               color: isOpen ? activeColor : defaultColor,
+              'aria-hidden': true,
             })}
           </div>
           <p className="font-semibold text-lg lg:text-xl leading-6">{text}</p>
@@ -57,6 +68,8 @@ const AccordionItem = ({
       </div>
       <div
         className={`overflow-hidden transition-max-height duration-200 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}
+        id={`content-${text.replace(/\s+/g, '-').toLowerCase()}`}
+        aria-labelledby={`header-${text.replace(/\s+/g, '-').toLowerCase()}`}
       >
         {renderDescription()}
       </div>

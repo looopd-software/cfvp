@@ -26,7 +26,12 @@ const ServicesSection = () => {
   });
 
   return (
-    <section id="servicios" className="bg-white" ref={ref}>
+    <section
+      id="servicios"
+      className="bg-white"
+      ref={ref}
+      aria-labelledby="encabezado-servicios"
+    >
       <motion.div
         className="flex flex-col justify-center items-center container py-20 gap-7 lg:py-32 lg:gap-12 max-w-desktop"
         variants={containerVariants}
@@ -34,7 +39,11 @@ const ServicesSection = () => {
         animate={inView ? 'visible' : 'hidden'}
       >
         <motion.div variants={itemVariants}>
-          <Heading text="NUESTROS SERVICIOS" variant="dark" />
+          <Heading
+            id="encabezado-servicios"
+            text="NUESTROS SERVICIOS"
+            variant="dark"
+          />
         </motion.div>
         <motion.p className="text-center" variants={itemVariants}>
           Nos distinguimos en el mercado por ofrecer soluciones integrales,

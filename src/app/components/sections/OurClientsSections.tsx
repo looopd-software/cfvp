@@ -72,8 +72,9 @@ const OurClientsSections = () => {
       id="clientes"
       className="relative flex flex-col py-20 md:py-40 gap-10 justify-center bg-white overflow-hidden"
       ref={ref}
+      aria-labelledby="nuestros-clientes-titulo"
     >
-      <div className="absolute top-0 right-0 w-full">
+      <div className="absolute top-0 right-0 w-full" aria-hidden="true">
         <Image
           src="/hero/isotipo-2.png"
           width={600}
@@ -95,7 +96,11 @@ const OurClientsSections = () => {
           className="flex-col md:flex-row justify-start md:justify-between items-center md:items-start gap-5 inline-flex text-center md:text-left"
         >
           <div className="grow shrink basis-0 px-6">
-            <Heading text="NUESTROS CLIENTES" variant="dark" />
+            <Heading
+              id="nuestros-clientes-titulo"
+              text="NUESTROS CLIENTES"
+              variant="dark"
+            />
           </div>
           <p className="grow shrink basis-0 text-base font-normal px-7 md:text-lg">
             Dirigimos nuestros servicios principalmente a empresas medianas de
@@ -139,6 +144,7 @@ const OurClientsSections = () => {
         centeredSlides={true}
         slidesPerView={3.75}
         className="flex md:hidden w-full"
+        aria-label="Carrusel de industrias de clientes"
       >
         {industryItems.map((item) => (
           <SwiperSlide key={item.title} className="" style={{ width: '97px' }}>

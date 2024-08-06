@@ -25,6 +25,14 @@ export default function PartnersDesktop() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
+          role="button"
+          tabIndex={0}
+          aria-pressed={selectedPartnerIndex === index}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              setSelectedPartnerIndex(index);
+            }
+          }}
         >
           <Partner
             url={partner.url}
@@ -47,6 +55,9 @@ export default function PartnersDesktop() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20, transition: { duration: 0 } }}
             transition={{ duration: 0.3 }}
+            role="region"
+            aria-labelledby={`partner-name-${selectedPartnerIndex}`}
+            aria-describedby={`partner-description-${selectedPartnerIndex}`}
           >
             <PartnerDetails partner={partners[selectedPartnerIndex]} />
           </motion.div>

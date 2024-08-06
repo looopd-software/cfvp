@@ -36,6 +36,7 @@ const PartnersSection = () => {
       id="socios"
       className="relative bg-black min-h-screen py-16 lg:py-32 flex flex-col items-center gap-10"
       ref={ref}
+      aria-labelledby="encabezado-socios"
     >
       <motion.div
         variants={containerVariants}
@@ -44,7 +45,7 @@ const PartnersSection = () => {
         className="flex flex-col items-center gap-10 w-full"
       >
         <motion.div variants={itemVariants}>
-          <Heading text="Socios" variant="light" />
+          <Heading id="encabezado-socios" text="Socios" variant="light" />
         </motion.div>
         <PartnerCarousel />
         <motion.div variants={itemVariants}>

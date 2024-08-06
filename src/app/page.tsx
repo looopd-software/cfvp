@@ -13,6 +13,7 @@ import FormSection from './components/sections/FormSection';
 import FooterSection from './components/sections/FooterSection';
 import Navbar from './components/navbar/Navbar';
 import Lenis from 'lenis';
+import Link from 'next/link';
 
 export default function Page() {
   useEffect(() => {
@@ -32,15 +33,20 @@ export default function Page() {
     <div
       className={`${marcellus.variable} ${karla.variable} font-sans overflow-x-hidden`}
     >
+      <Link href="#contenido-principal" className="sr-only focus:not-sr-only">
+        Saltar al contenido principal
+      </Link>
       <Navbar />
-      <HeroSection />
-      <WhoAreWeSection />
-      <PartnersSection />
-      <ServicesSection />
-      <OurTeamSection />
-      <OurClientsSection />
-      <OurSpaceSection />
-      <FormSection />
+      <main id="contenido-principal">
+        <HeroSection />
+        <WhoAreWeSection />
+        <PartnersSection />
+        <ServicesSection />
+        <OurTeamSection />
+        <OurClientsSection />
+        <OurSpaceSection />
+        <FormSection />
+      </main>
       <FooterSection />
     </div>
   );

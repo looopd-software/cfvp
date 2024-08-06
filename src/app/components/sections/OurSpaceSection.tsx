@@ -3,7 +3,14 @@ import { Video } from '../common/Video';
 
 const OurSpaceSection = () => {
   return (
-    <section id="espacio" className="relative h-auto">
+    <section
+      id="espacio"
+      className="relative h-auto"
+      aria-labelledby="nuestro-espacio-titulo"
+    >
+      <h2 id="nuestro-espacio-titulo" className="sr-only">
+        Nuestro Espacio
+      </h2>
       <div className="flex flex-col lg:min-h-screen h-auto gap-1">
         <VideoRow />
 
@@ -21,6 +28,7 @@ function VideoRow() {
       <Video
         className="absolute w-full h-full object-cover"
         path="/space/space.mp4"
+        aria-label="Video mostrando nuestro espacio de oficina"
       />
     </div>
   );
@@ -33,7 +41,7 @@ function ImagesRow() {
         <div className="relative w-full h-[33vh] md:h-[45vh] lg:h-full lg:w-1/3">
           <Image
             src="/space/space-1.jpg"
-            alt="Image 1 of our office"
+            alt="Imagen 1 de nuestra oficina"
             fill
             style={{
               objectFit: 'cover',
@@ -44,7 +52,7 @@ function ImagesRow() {
         <div className="relative w-full h-[33vh] md:h-[45vh] lg:h-full lg:w-1/3">
           <Image
             src="/space/space-2.jpg"
-            alt="Image 2 of our office"
+            alt="Imagen 2 de nuestra oficina"
             fill
             style={{
               objectFit: 'cover',
@@ -55,7 +63,7 @@ function ImagesRow() {
         <div className="relative w-full h-[33vh] md:h-[45vh] lg:h-full lg:w-1/3">
           <Image
             src="/space/space-3.jpg"
-            alt="Image 3 of our office"
+            alt="Imagen 3 de nuestra oficina"
             fill
             className="transform object-cover"
             style={{

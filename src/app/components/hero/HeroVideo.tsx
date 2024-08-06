@@ -37,6 +37,7 @@ const HeroVideo: React.FC = () => {
         preload="metadata"
         width="100%"
         height="auto"
+        aria-hidden="true"
       >
         <source src={videoPath} type="video/mp4" />
       </video>

@@ -46,7 +46,7 @@ export default function Input({
         required={required}
         disabled={disabled}
         aria-required={required}
-        aria-invalid={disabled ? "true" : "false"}
+        aria-invalid={disabled ? 'true' : 'false'}
       />
     </div>
   );

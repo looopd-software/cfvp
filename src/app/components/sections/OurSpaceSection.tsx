@@ -3,8 +3,14 @@ import { Video } from '../common/Video';
 
 const OurSpaceSection = () => {
   return (
-    <section id="espacio" className="relative h-auto" aria-labelledby="nuestro-espacio-titulo">
-      <h2 id="nuestro-espacio-titulo" className="sr-only">Nuestro Espacio</h2>
+    <section
+      id="espacio"
+      className="relative h-auto"
+      aria-labelledby="nuestro-espacio-titulo"
+    >
+      <h2 id="nuestro-espacio-titulo" className="sr-only">
+        Nuestro Espacio
+      </h2>
       <div className="flex flex-col lg:min-h-screen h-auto gap-1">
         <VideoRow />
 

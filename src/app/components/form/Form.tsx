@@ -66,8 +66,12 @@ export default function Form() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="w-full px-7 max-w-[600px]" aria-describedby="form-description">
-      <p id="form-description" className="sr-only">
+      <form
+        onSubmit={handleSubmit}
+        className="w-full px-7 max-w-[600px]"
+        aria-describedby="form-description"
+      >
+        <p id="form-description" className="sr-only">
           Formulario de contacto para enviar un mensaje a nuestra empresa.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3">

@@ -40,7 +40,11 @@ const WhoAreWeSection = () => {
         }}
         className="relative flex flex-col items-center justify-center gap-11 z-0 max-w-desktop mx-auto px-7"
       >
-        <Heading id="encabezado-quienes-somos" text="QUIÉNES SOMOS" variant="dark" />
+        <Heading
+          id="encabezado-quienes-somos"
+          text="QUIÉNES SOMOS"
+          variant="dark"
+        />
         <p className="text-black text-lg lg:text-2xl text-center">
           Somos un estudio de profesionales en ciencias económicas de la ciudad
           de Rosario. Nuestra misión es analizar y resolver problemas

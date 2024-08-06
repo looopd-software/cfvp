@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
+import {  Navigation, Pagination } from 'swiper/modules';
 import { partners } from './partners';
 import { PartnerProps } from './PartnerProps';
 import Partner from './Partner';
@@ -46,8 +46,8 @@ const PartnerSwiper: FC = () => {
       }}
       className="block lg:hidden w-full h-auto relative items-center"
     >
-      <SwiperButtonPrev />
-      <SwiperButtonNext />
+      <SwiperButtonPrev aria-label="Anterior" />
+      <SwiperButtonNext aria-label="Siguiente" />
       {partners.map((partner: PartnerProps, index: number) => (
         <SwiperSlide key={`partner-carousel-${index}`}>
           <Partner
@@ -69,6 +69,8 @@ const PartnerSwiper: FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
+            aria-labelledby={`partner-name-${activeIndex}`}
+            aria-describedby={`partner-description-${activeIndex}`}
           >
             <PartnerDetails partner={partners[activeIndex]} />
           </motion.div>

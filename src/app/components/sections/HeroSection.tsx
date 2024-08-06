@@ -19,6 +19,7 @@ const HeroSection: React.FC = () => {
       id="hero"
       className="relative w-full h-screen flex justify-center"
       style={{ clipPath: 'polygon(0% 0, 100% 0%, 100% 100%, 0 100%)' }}
+      aria-labelledby="hero-heading"
     >
       <div className="fixed top-0 h-[800px] w-full">
         <div className="relative w-full h-screen flex justify-center">
@@ -39,12 +40,13 @@ const HeroSection: React.FC = () => {
             >
               <Image
                 src={'/hero/logo.svg'}
-                alt="Logo de Castro Fernandez Vignau y Pianovi"
+                alt="Logo de la empresa Castro Fernandez Vignau y Pianovi"
                 width={757}
                 height={332}
               />
             </motion.div>
             <motion.h1
+              id="hero-heading"
               className="uppercase text-center text-white text-xl lg:text-[28px] leading-7 font-serif"
               initial="hidden"
               animate="visible"

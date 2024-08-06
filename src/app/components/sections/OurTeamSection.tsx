@@ -44,7 +44,11 @@ const OurTeamSection = () => {
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
       >
-        <Heading id="nuestro-equipo-titulo" text="NUESTRO EQUIPO" variant="light" />
+        <Heading
+          id="nuestro-equipo-titulo"
+          text="NUESTRO EQUIPO"
+          variant="light"
+        />
         <motion.div
           className="w-full text-center lg:text-left lg:max-w-[700px]"
           variants={containerVariants}
@@ -88,7 +92,10 @@ export default OurTeamSection;
 function TeamBackground() {
   return (
     <>
-      <div className="absolute top-0 left-0 w-full h-full z-0 opacity-50" aria-hidden="true">
+      <div
+        className="absolute top-0 left-0 w-full h-full z-0 opacity-50"
+        aria-hidden="true"
+      >
         <Image
           src="/our-team/our-team-bg.jpg"
           alt="Fondo de nuestro equipo trabajando"
@@ -99,7 +106,10 @@ function TeamBackground() {
           }}
         />
       </div>
-      <div className="absolute top-0 left-0 bg-black w-full h-full z-0 opacity-85" aria-hidden="true"></div>
+      <div
+        className="absolute top-0 left-0 bg-black w-full h-full z-0 opacity-85"
+        aria-hidden="true"
+      ></div>
     </>
   );
 }

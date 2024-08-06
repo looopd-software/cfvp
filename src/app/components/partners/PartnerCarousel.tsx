@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import {  Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import { partners } from './partners';
 import { PartnerProps } from './PartnerProps';
 import Partner from './Partner';

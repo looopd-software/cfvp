@@ -25,6 +25,7 @@ const ContactInfo = () => (
         href="https://maps.app.goo.gl/r6wEVvH7MVenPK1y7"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Ubicación en mapa: Córdoba 1015, Piso 1 Oficina 1, Rosario, Argentina"
       >
         <div className="w-4 h-[20.85px] relative">
           <Image
@@ -38,6 +39,7 @@ const ContactInfo = () => (
       <Link
         className="justify-center items-start gap-2 inline-flex hover:underline"
         href="mailto:contacto@cfvp.com.ar"
+        aria-label="Enviar un correo a contacto@cfvp.com.ar"
       >
         <div className="w-4 h-[20.85px] relative">
           <Image src={'/icons/email.svg'} alt="Icono de email" fill />
@@ -63,30 +65,35 @@ const NavigationLinks = () => (
       <Link
         className="font-normal text-sm hover:underline leading-[21px] md:text-base md:font-normal md:leading-normal"
         href={'#servicios'}
+        aria-label="Ir a la sección de servicios"
       >
         Servicios
       </Link>
       <Link
         className="font-normal text-sm hover:underline leading-[21px] md:text-base md:font-normal md:leading-normal"
         href={'#nosotros'}
+        aria-label="Ir a la sección de nosotros"
       >
         Nosotros
       </Link>
       <Link
         className="font-normal text-sm hover:underline leading-[21px] md:text-base md:font-normal md:leading-normal"
         href={'#socios'}
+        aria-label="Ir a la sección de socios"
       >
         Socios
       </Link>
       <Link
         className="font-normal text-sm hover:underline leading-[21px] md:text-base md:font-normal md:leading-normal"
         href={'#clientes'}
+        aria-label="Ir a la sección de clientes"
       >
         Clientes
       </Link>
       <Link
         className="font-normal text-sm hover:underline leading-[21px]"
         href={'#contacto'}
+        aria-label="Ir a la sección de contacto"
       >
         Contacto
       </Link>
@@ -96,7 +103,7 @@ const NavigationLinks = () => (
 
 const FooterSection = () => {
   return (
-    <section id="footer" className="bg-black text-white flex items-center">
+    <footer id="footer" className="bg-black text-white flex items-center">
       <div className="container w-full px-7 py-10 md:pt-16 flex-col justify-start md:justify-between items-start gap-[72px] md:gap-10 inline-flex">
         <div className="w-full flex-col md:flex-row justify-start items-start gap-10 inline-flex">
           <motion.div
@@ -109,7 +116,7 @@ const FooterSection = () => {
             className="flex-col justify-center items-start gap-[7px] inline-flex"
           >
             <div className="w-[172px] h-[79px] md:w-[233px] md:h-[107px] pr-[7.38px] pb-[5.17px] justify-start items-center flex">
-              <Link href={''}>
+              <Link href={''} aria-label="Inicio">
                 <Image
                   src={'/hero/logo.svg'}
                   alt="Logo de Castro Fernandez Vignau y Pianovi"
@@ -147,13 +154,14 @@ const FooterSection = () => {
               href="https://looopd.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Desarrollado por Looopd"
             >
               Looopd
             </Link>
           </p>
         </motion.div>
       </div>
-    </section>
+    </footer>
   );
 };
 
